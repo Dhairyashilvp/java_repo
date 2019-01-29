@@ -1,0 +1,134 @@
+﻿<!--
+Author: 旋風 Desinger
+Edited by Vy Nghia
+© 2017 BA Script. Vy Nghia all right Copyright.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tôi yêu bạn</title>
+
+<!-- Font Independence -->
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<!-- Default CSS -->
+<link href="css/default.css" type="text/css" rel="stylesheet">
+
+<!-- Script -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+<!-- Font -->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+			<audio autoplay="autopaly">
+					<source src="music/motnha.mp3" type="audio/mp3">
+			</audio>  
+        <div id="main">
+<div id="mainDiv">
+	<div id="content">
+	
+		<!-- TEXT [EDIT ONLY] -->
+		<div id="code">
+			<span class="comments">~</span><br />
+			<span class="space"/><span class="comments">*Một điều anh muốn nói,</span><br />
+			<span class="space"/><span class="comments">*Tận ở trong trái tim của anh!</span><br />
+			<span class="space"/><span class="comments">~</span><br />
+			Top name = <span class="keyword">Vy</span> Nghĩa<br />
+			Bot name = <span class="keyword">Trọng</span> Nghĩa<br />
+			<span class="comments">// Rơi vào lưới tình. </span><br />
+			Anh đã rơi vào dòng sông tình yêu của em;<br />
+			<span class="comments">// Anh đã yêu em.</span><br />
+			Từ đó anh luôn nghĩ về em, luôn muốn bên cạnh em;<br />
+			<span class="comments">// Thời gian trôi đi...</span><br />
+			Anh vẫn không nghĩ về em, thương em thật nhiều;<br />
+			<span class="comments">// Sự sắp đặt ngọt ngào.</span><br />
+			Anh luôn nhìn em trong sự im lặng;<br />
+			<span class="comments">// Bầu trời tĩnh lặng.</span><br />
+			<span class="comments">// Cho dù đi bộ 69 kilomet.</span><br />
+			<span class="keyword">Anh</span> rất <span class="keyword">hạnh phúc</span>;<br />
+			<span class="keyword">Anh</span> muốn em cũng <span class="keyword">hạnh phúc</span>;<br />
+			<span class="placeholder"/><span class="comments">// Ngay bây giờ, lúc này....</span><br />
+			<span class="placeholder"/><span class="comments">// Có thể ở trong tương lai.</span><br />
+			<span class="placeholder"/>Một giấc mơ? Anh muốn nó thành sự thật;<br />
+			<span class="comments">// Anh muốn em hạnh phúc và thuộc về anh.</span><br />
+			<br>
+			<br>
+			Anh muốn nói với em:<br />
+			Dù biết anh và em là <span class="keyword">CON TRAI</span>;<br />
+			Nhưng anh không bao giờ <span class="keyword">QUAN TÂM</span>;<br /><br />
+			<span class="keyword">Trọng Nghĩa</span>, Anh yêu em - mãi mãi;<br />			
+		</div>
+		<!-- END TEXT -->
+		
+		<!-- MESSAGES HEART -->
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Trọng Nghĩa, đây là thời gian anh yêu em... ~
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Trái tim của anh thuộc về em.<br/>
+					<div class="signature">- Vy Nghia<div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Copyright/Watermark -->
+<div style="text-align:center;margin:0px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>© 2017 Vy Nghia - LinaSS Edited.</b></p>
+</div>
+
+<!-- [!] CHANGE TIME HERRE [!] -->
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2015, 2, 28); // <--- Edit Time Here 
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<!-- [!] CHANGE TIME HERRE [!] -->
+
+</body>
+</html>

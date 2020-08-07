@@ -20,25 +20,18 @@ class MergeSort{
         {
             if(L[i] <= R[j])
             {
-                iparray[k] = L[i];
-                i++;
+                iparray[k++] = L[i++];
             }else{
-                iparray[k] = R[j];
-                j++;   
+                iparray[k++] = R[j++];
             }
-            k++;
         }
         while(i < n1)
         {
-            iparray[k] = L[i];
-            k++;
-            i++;
+            iparray[k++] = L[i++];
         }
         while(j < n2)
         {
-            iparray[k] = R[j];
-            k++;
-            j++;
+            iparray[k++] = R[j++];
         }
 
     }
